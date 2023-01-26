@@ -1,5 +1,5 @@
 /* eslint-env jest, browser */
-import App from '../src/javascripts/modules/app'
+import App from '../src/locations/ticket_sidebar/app'
 import i18n from '../src/javascripts/lib/i18n'
 import { CLIENT, ORGANIZATIONS } from './mocks/mock'
 import { unmountComponentAtNode } from 'react-dom'

@@ -12,13 +12,7 @@ const externalAssets = {
 }
 
 module.exports = {
-  entry: {
-    app: [
-      '@babel/polyfill',
-      './src/javascripts/locations/ticket_sidebar.js',
-      './src/index.css'
-    ]
-  },
+  entry,
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist/assets')
@@ -73,11 +67,6 @@ module.exports = {
       path: path.resolve(__dirname, './src/translations')
     }),
 
-    new HtmlWebpackPlugin({
-      warning: 'AUTOMATICALLY GENERATED FROM ./src/templates/iframe.html - DO NOT MODIFY THIS FILE DIRECTLY',
-      vendorJs: externalAssets.js,
-      template: './src/templates/iframe.html',
-      filename: 'iframe.html'
-    })
+    new HtmlWebpackPlugin
   ]
 }
